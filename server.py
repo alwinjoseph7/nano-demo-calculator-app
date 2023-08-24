@@ -12,7 +12,7 @@ def add():
     data = req.get_json()
     first = data['first']
     second = data['second']
-    return f'result: {first+second}'
+    return f'{first+second}'
 
 
 @app.route("/calculator/subtract", methods=['POST'])
@@ -20,7 +20,7 @@ def subtract():
     data = req.get_json()
     first = data['first']
     second = data['second']
-    return f'result: {first-second}'
+    return f'{first-second}'
 
 if __name__ == '__main__':
     app.run(port=8080,host='0.0.0.0')
